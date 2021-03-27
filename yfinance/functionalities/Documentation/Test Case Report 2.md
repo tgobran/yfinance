@@ -21,5 +21,5 @@
 **Procedural Steps:** From the command line enter `python test_info.py`. Test test cases have already been set up to run automatically with test inputs and expected output. `unittest` runs the test and print if there is a mismatch between expected output and output from the test.<BR>
 **Expected Results of Case:** The anticipated outcome is no errors and that the result when no url is provided is an empty string and a newly formatted url prepended with 'logo.clearbit.com' when a url is provided.<BR>
 ## Actual Results
-**Output Specifications:** The output of this case is a success. The value of 'logo_url' is output correctly with or without a website url being provided.<BR>
+**Output Specifications:** The output of this case is a success. The value of 'logo_url' is output correctly with or without a website url being provided.<BR><BR>
 ![Error Output](img/keyError.png)
