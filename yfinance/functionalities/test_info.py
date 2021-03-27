@@ -23,11 +23,11 @@ class TestInfo(unittest.TestCase):
         url = "https://www.domainName.com/"
         urlPartial = "domainName.com"
         expectedOutput = "https://logo.clearbit.com/{}".format(urlPartial)
-        info = info_func({'website': url})
+        info = info_func({'summaryProfile': {'website': url}, 'financialData':{'regularMarketOpen':7}})
         self.assertEqual(info['logo_url'], expectedOutput)
 
     def test_no_website_field(self):
-        info = info_func({})
+        info = info_func({'financialData':{'regularMarketOpen':7}})
         self.assertEqual(info['logo_url'],'')
 
     
@@ -39,10 +39,10 @@ class TestInfo(unittest.TestCase):
                   'quoteType': {3:3},
                   'defaultKeyStatistics': {4:4},
                   'assetProfile': {5:5},
-                  'financialData': {6:6},
-                  'regularMarketOpen':{7:7}}
-        output_dict = {1:1, 2:2, 3:3, 4:4, 5:5, 6:6, 7:7, 'logo_url': '', 'regularMarketPrice': {7,7}}
+                  'financialData':{'regularMarketOpen':7}}
+        output_dict = {1:1, 2:2, 3:3, 4:4, 5:5, 'logo_url': '', 'regularMarketPrice': 7, 'regularMarketOpen':7}
         info = info_func(data)
+        print(info)
         self.assertDictEqual(info, output_dict) 
         
     def test_data_keys_without_MarketPrice(self):  
