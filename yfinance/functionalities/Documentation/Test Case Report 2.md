@@ -4,10 +4,10 @@
 **System Test Date:** 27/03/2021 <BR>
 **Tester:** Group 2<BR>
 **Test Case Number:** 2 <BR>
-**Test Case Description:** Verify the key 'logo_url' is in the dictionary and its value is correct. <BR>
+**Test Case Description:** Verify the key `logo_url` is in the dictionary and its value is correct. <BR>
 **Results:** Pass<BR>
 **Requirement(s)to be tested:** info from base.py line 332 to 347. <BR>
-**Set Up Procedures:** run `test_info.py` file to get test results. Ensure that `info.py` is in the same directory as it contains the functionality to be tested. <BR>
+**Set Up Procedures:** Run `test_info.py` file to get test results. Ensure that `info.py` is in the same directory as it contains the functionality to be tested. <BR>
 **Stop Procedures:** Test stops by itself and reports results. <BR>
 **Hardware:** No specific hardware requirements. <BR>
 **Software:** Must have python3, unittest, and doctest installed. <BR>

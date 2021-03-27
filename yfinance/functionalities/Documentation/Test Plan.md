@@ -55,7 +55,7 @@ Our test object is to isolate (separate the code into its own function) and test
 
 # Planned Tests
 
-- Test the return value of info is a dictionary as expected
+- Test that the return value of info is a dictionary as expected
 - Test the website field in the returned dictionary works regardless of whether a url is provided or not
 - Test that the functionality works when `regularMarketOpen` is defined
 - Test that the functionality works when `regularMarketOpen` is not defined
@@ -64,7 +64,7 @@ Our test object is to isolate (separate the code into its own function) and test
 
 ### Assumptions
 
-- Since the exact values coming into our function is unknown, we assume that the dummy test values used during tests do not have an impact on the correctness of the functionality. That is if our dummy values is a dictionary of integers, whereas in production it is a dictionary of strings, this does not affect our testing. This is a fair assumption to make because our functionality only deals with the keys of the dictionary, not the values themselves. So as long, as the key types match, testing should work as expected.
+- Since the exact values coming into our function is unknown, we assume that the dummy test values used during tests do not have an impact on the correctness of the functionality. That is if our dummy value is a dictionary of integers, whereas in production it is a dictionary of strings, this does not affect our testing. This is a fair assumption to make because our functionality only deals with the keys of the dictionary, not the values themselves. So as long, as the key types match, testing should work as expected.
 - The expected output of the function is unclear. One line in the code seems to indicate that the output dictionary should have a key called `regularMarketPrice`, however, this line causes an error depending on the input. Therefore, it is unclear whether the line should be removed completely which will result in the output not having `regularMarketPrice` as a key or if the line should be modified so that `regularMarketPrice` is still a key, but the line it is on does not cause an error. As it stands, the assumption is that the output dictionary should have `regularMarketPrice` as a key with an empty string as a default value.
 
 ### Risks
