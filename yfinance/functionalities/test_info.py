@@ -13,6 +13,12 @@ from info import info_func
 
 class TestInfo(unittest.TestCase):
     
+    def test_return_dict(self):
+        info = info_func({})
+        self.assertTrue(isinstance(info,dict))
+        
+    
+    
     def test_website_field(self):
         url = "https://www.domainName.com/"
         urlPartial = "domainName.com"
@@ -20,15 +26,11 @@ class TestInfo(unittest.TestCase):
         info = info_func({'website': url})
         self.assertEqual(info['logo_url'], expectedOutput)
 
-
     def test_no_website_field(self):
         info = info_func({})
         self.assertEqual(info['logo_url'],'')
 
     
-    def test_return_dict(self):
-        info = info_func({})
-        self.assertTrue(isinstance(info,dict))
 
 
     def test_data_keys_with_MarketPrice(self):  
@@ -39,10 +41,9 @@ class TestInfo(unittest.TestCase):
                   'assetProfile': {5:5},
                   'financialData': {6:6},
                   'regularMarketOpen':{7:7}}
-        output_dict = {1:1, 2:2, 3:3, 4:4, 5:5, 6:6, 7:7, 'logo_url': '', 'regularMarketOpen': {7,7}}
+        output_dict = {1:1, 2:2, 3:3, 4:4, 5:5, 6:6, 7:7, 'logo_url': '', 'regularMarketPrice': {7,7}}
         info = info_func(data)
         self.assertDictEqual(info, output_dict) 
-        
         
     def test_data_keys_without_MarketPrice(self):  
         data = {'summaryProfile': {1:1}, 
@@ -51,7 +52,7 @@ class TestInfo(unittest.TestCase):
                   'defaultKeyStatistics': {4:4},
                   'assetProfile': {5:5},
                   'financialData': {6:6}}
-        output_dict = {1:1, 2:2, 3:3, 4:4, 5:5, 6:6, 7:7, 'logo_url': '', 'regularMarketOpen': ''}
+        output_dict = {1:1, 2:2, 3:3, 4:4, 5:5, 6:6, 7:7, 'logo_url': '', 'regularMarketPrice': ''}
         info = info_func(data)
         self.assertDictEqual(info, output_dict) 
                   
