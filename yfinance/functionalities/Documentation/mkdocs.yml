@@ -1,0 +1,7 @@
+site_name: Assignment 2 - Group 2
+nav:
+    - Home: index.md
+    - Plan: 'Test Plan.md'
+    - Report One: 'Test Case Report 1.md'
+    - Report Two: 'Test Case Report 2.md'
+    - Report Three: 'Test Case Report 3.md'
