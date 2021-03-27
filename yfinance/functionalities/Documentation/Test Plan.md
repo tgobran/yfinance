@@ -16,23 +16,37 @@ Our test object is to isolate (separate the code into its own function) and test
 
 ### Issues Related to the Code
 
-- **Issue #637** - Dictionary access of `regularMarketOpen` must be done conditionally.
-- **Issue #604** - Questionable re-assignment of `regularMarketPrice` to `regularMarketOpen`
-- **Issue #569** - Incorrect data for `regularMarketPrice`
-- **Issue #353** - `regularMarketOpen` not always a dictionary key.
-- **Issue #333** - `regularMarketOpen` not always a dictionary key.
+- **Issue #637**
+  - Dictionary access of `regularMarketOpen` must be done conditionally.
+- **Issue #604**
+  - Questionable re-assignment of `regularMarketPrice` to `regularMarketOpen`
+- **Issue #569**
+  - Incorrect data for `regularMarketPrice`
+- **Issue #353**
+  - `regularMarketOpen` not always a dictionary key.
+- **Issue #333**
+  - `regularMarketOpen` not always a dictionary key.
 
 ### Pull Requests Related to the Code
 
-- **PR #629** - Filtering out errors necessitates check for a missing conditional.
-- **PR #628** - `regularMarketPrice` wrongly assigned to `regularMarketOpen`.
-- **PR #620** - Info put into a Try block.
-- **PR #590** - Changed data structure holding Info data elements.
-- **PR #498** - Moves Info section into a try block.
-- **PR #409** - Adds significant error handling to the Info section
-- **PR #354** - Moves `regularMarketOpen` to a conditional
-- **PR #321** - Data structure name change.
-- **PR #309** - Small refactoring work.
+- **PR #629**
+  - Filtering out errors necessitates check for a missing conditional.
+- **PR #628**
+  - `regularMarketPrice` wrongly assigned to `regularMarketOpen`.
+- **PR #620**
+  - Info put into a Try block.
+- **PR #590**
+  - Changed data structure holding Info data elements.
+- **PR #498**
+  - Moves Info section into a try block.
+- **PR #409**
+  - Adds significant error handling to the Info section
+- **PR #354**
+  - Moves `regularMarketOpen` to a conditional
+- **PR #321**
+  - Data structure name change.
+- **PR #309**
+  - Small refactoring work.
 
 # Problems Found
 
@@ -73,4 +87,4 @@ Our test object is to isolate (separate the code into its own function) and test
 
 ### Quick Fixes
 
-- There is not a quick fix to this solution that we could implement without knowledge of the structure of the dictionary and what the keys of the dictionary are. In order to get an example of the dictionary structure, the value self.ticker must be defined. This value is not defined within base.py. It is sent as an argument to the constructor of the class. Following where the class is used in code, leads to a long inheritance that still does not reveal potential values that causes this bug. As such a quick fix is not possible on our end.
+- There is not a quick fix to this solution that we could implement without knowledge of the structure of the dictionary and what the keys of the dictionary are. In order to get an example of the dictionary structure, the value `self.ticker` must be defined. This value is not defined within `base.py`. It is sent as an argument to the constructor of the class. Following where the class is used in code, leads to a long inheritance that still does not reveal potential values that causes this bug. As such a quick fix is not possible on our end.
