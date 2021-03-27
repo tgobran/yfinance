@@ -84,8 +84,28 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#test-case-report" class="nav-link">Test Case Report</a>
+            <li class="nav-item" data-level="1"><a href="#test-case-report-1" class="nav-link">Test Case Report #1</a>
               <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#general-information" class="nav-link">General Information</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#introduction" class="nav-link">Introduction</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#environmental-needs" class="nav-link">Environmental Needs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#test" class="nav-link">Test</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#actual-results" class="nav-link">Actual Results</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
               </ul>
             </li>
         </ul>
@@ -93,25 +113,30 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="test-case-report">Test Case Report</h1>
+<h1 id="test-case-report-1">Test Case Report #1</h1>
+<h2 id="general-information">General Information</h2>
 <p><strong>Test Stage:</strong> Functionality <BR>
 <strong>Test Date:</strong> 27/03/2021 <BR>
 <strong>System Test Date:</strong> 27/03/2021 <BR>
 <strong>Tester:</strong> Group 2<BR>
 <strong>Test Case Number:</strong> 1 <BR>
 <strong>Test Case Description:</strong> Verify the return value is a dictionary. <BR>
-<strong>Results:</strong> Fail <BR>
-<strong>Requirement(s)to be tested:</strong> info from base.py line 332 to 347. <BR>
+<strong>Results:</strong> Fail <BR></p>
+<h2 id="introduction">Introduction</h2>
+<p><strong>Requirement(s)to be tested:</strong> info from base.py line 332 to 347. <BR>
 <strong>Set Up Procedures:</strong> Run <code>test_info.py</code> file to get test results. Ensure that <code>info.py</code> is in the same directory as it contains the functionality to be tested. <BR>
-<strong>Stop Procedures:</strong> Test stops by itself and reports results. <BR>
-<strong>Hardware:</strong> No specific hardware requirements. <BR>
+<strong>Stop Procedures:</strong> Test stops by itself and reports results. <BR></p>
+<h2 id="environmental-needs">Environmental Needs</h2>
+<p><strong>Hardware:</strong> No specific hardware requirements. <BR>
 <strong>Software:</strong> Must have python3, unittest, and doctest installed. <BR>
-<strong>Procedural Requirements:</strong> There are no constraints on the test procedures necessary to execute the test case. <BR>
-<strong>Test Items and Features:</strong> This test checks that the functionality runs with no errors and returns a dictionary as expected.<BR>
+<strong>Procedural Requirements:</strong> There are no constraints on the test procedures necessary to execute the test case. <BR></p>
+<h2 id="test">Test</h2>
+<p><strong>Test Items and Features:</strong> This test checks that the functionality runs with no errors and returns a dictionary as expected.<BR>
 <strong>Input Specifications:</strong> The input for this test case is an empty dictionary.<BR>
 <strong>Procedural Steps:</strong> From the command line enter <code>python test_info.py</code>. Test test cases have already been set up to run automatically with test inputs and expected output. <code>unittest</code> runs the test and print if there is a mismatch between expected output and output from the test.<BR>
-<strong>Expected Results of Case:</strong> The anticipated outcome is no errors and that the result is a dictionary. To check this, we verify that the output is of type <code>dict</code> and that no errors are raised during the test.<BR>
-<strong>Output Specifications:</strong> The output of this case is a KeyError from python due to the line <code>info['regularMarketPrice'] = info['regularMarketOpen']</code>. 'regularMarketOpen' is not defined in the info dictionary. As such, the test failed as no errors was the expected output of the test<BR>
+<strong>Expected Results of Case:</strong> The anticipated outcome is no errors and that the result is a dictionary. To check this, we verify that the output is of type <code>dict</code> and that no errors are raised during the test.<BR></p>
+<h2 id="actual-results">Actual Results</h2>
+<p><strong>Output Specifications:</strong> The output of this case is a KeyError from python due to the line <code>info['regularMarketPrice'] = info['regularMarketOpen']</code>. 'regularMarketOpen' is not defined in the info dictionary. As such, the test failed as no errors was the expected output of the test<BR><BR>
 <img alt="Error Output" src="../img/keyError.png" /></p></div>
             </div>
         </div>
