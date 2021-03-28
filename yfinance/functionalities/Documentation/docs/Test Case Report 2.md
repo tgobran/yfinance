@@ -22,4 +22,3 @@
 **Expected Results of Case:** The anticipated outcome is no errors and that the result when no url is provided is an empty string and a newly formatted url prepended with `logo.clearbit.com` when a url is provided.<BR>
 ## Actual Results
 **Output Specifications:** The output of this case is a success. The value of `logo_url` is output correctly with or without a website url being provided.<BR><BR>
-![Error Output](img/keyError.png)
