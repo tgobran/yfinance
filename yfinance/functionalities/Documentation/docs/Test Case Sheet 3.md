@@ -1,5 +1,5 @@
 # Test Case Sheet #3
-## System Test Case #3**
+## System Test Case #3
 **Tester Name:** Group 2 <BR>
 **Date(s) of Test:** 27/03/2021 <BR>
 **Prerequisites for this test:** `python3`, `unittest`, and `doctest` installed <BR>
