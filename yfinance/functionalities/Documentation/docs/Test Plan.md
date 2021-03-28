@@ -1,5 +1,5 @@
-# Introduction
-
+# Test Plan
+## Introduction
 ### Objectives
 
 Our test object is to isolate (separate the code into its own function) and test the **info** function of the Yahoo Finance Market Data Downloader application.<br>
@@ -12,7 +12,7 @@ Our test object is to isolate (separate the code into its own function) and test
 - Jonathan Ong
 - Tyler Gobran
 
-# Research and Screening
+## Research and Screening
 
 ### Issues Related to the Code
 
@@ -48,19 +48,19 @@ Our test object is to isolate (separate the code into its own function) and test
 - **PR #309**
   - Small refactoring work.
 
-# Problems Found
+## Problems Found
 
 - The access of the `regularMarketOpen` dictionary value can fail (keyError).
   - `regularMarketOpen` is not always defined in the dictionary.
 
-# Planned Tests
+## Planned Tests
 
 - Test that the return value of info is a dictionary as expected
 - Test the website field in the returned dictionary works regardless of whether a url is provided or not
 - Test that the functionality works when `regularMarketOpen` is defined
 - Test that the functionality works when `regularMarketOpen` is not defined
 
-# Assumptions / Risks
+## Assumptions / Risks
 
 ### Assumptions
 
@@ -71,15 +71,15 @@ Our test object is to isolate (separate the code into its own function) and test
 
 - Since expected output is slightly unclear, fixing the issue may cause some of the implemented tests to fail since they were created with an output changing assumption.
 
-# Test Approach
+## Test Approach
 
 - Our approach to testing is to use automation so that tests can be run quickly and whenever updates are made to the code base.
 
-# Test Environment
+## Test Environment
 
 - The testing environment is python. Tests were created using `unittest`, a python testing framework and `docstrings` for some documentation on how to run the code.
 
-# Software Fixing
+## Software Fixing
 
 ### Pull Requests
 
