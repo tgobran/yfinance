@@ -1,10 +1,10 @@
 # Test Plan
 ## Introduction
-### Objectives
+#### Objectives
 
 Our test object is to isolate (separate the code into its own function) and test the **info** function of the Yahoo Finance Market Data Downloader application.<br>
 
-### Team Members
+#### Team Members
 
 - Ayooluwa Oladosu
 - Beth Ding
@@ -14,7 +14,7 @@ Our test object is to isolate (separate the code into its own function) and test
 
 ## Research and Screening
 
-### Issues Related to the Code
+#### Issues Related to the Code
 
 - **Issue #637**
   - Dictionary access of `regularMarketOpen` must be done conditionally.
@@ -27,7 +27,7 @@ Our test object is to isolate (separate the code into its own function) and test
 - **Issue #333**
   - `regularMarketOpen` not always a dictionary key.
 
-### Pull Requests Related to the Code
+#### Pull Requests Related to the Code
 
 - **PR #629**
   - Filtering out errors necessitates check for a missing conditional.
@@ -60,14 +60,12 @@ Our test object is to isolate (separate the code into its own function) and test
 - Test that the functionality works when `regularMarketOpen` is defined
 - Test that the functionality works when `regularMarketOpen` is not defined
 
-## Assumptions / Risks
-
-### Assumptions
+## Assumptions
 
 - Since the exact values coming into our function is unknown, we assume that the dummy test values used during tests do not have an impact on the correctness of the functionality. That is if our dummy value is a dictionary of integers, whereas in production it is a dictionary of strings, this does not affect our testing. This is a fair assumption to make because our functionality only deals with the keys of the dictionary, not the values themselves. So as long, as the key types match, testing should work as expected.
 - The expected output of the function is unclear. One line in the code seems to indicate that the output dictionary should have a key called `regularMarketPrice`, however, this line causes an error depending on the input. Therefore, it is unclear whether the line should be removed completely which will result in the output not having `regularMarketPrice` as a key or if the line should be modified so that `regularMarketPrice` is still a key, but the line it is on does not cause an error. As it stands, the assumption is that the output dictionary should have `regularMarketPrice` as a key with an empty string as a default value.
 
-### Risks
+## Risks
 
 - Since expected output is slightly unclear, fixing the issue may cause some of the implemented tests to fail since they were created with an output changing assumption.
 
@@ -81,10 +79,10 @@ Our test object is to isolate (separate the code into its own function) and test
 
 ## Software Fixing
 
-### Pull Requests
+#### Pull Requests
 
 - Pull request #590 addresses the issue of the KeyError, `regularMarketOpen`, from happening on every run of the function. The proposed solution is that instead of `regularMarketOpen` being a key to info defined within the function, it is a key to data which is passed in as input.
 
-### Quick Fixes
+#### Quick Fixes
 
 - There is not a quick fix to this solution that we could implement without knowledge of the structure of the dictionary and what the keys of the dictionary are. In order to get an example of the dictionary structure, the value `self.ticker` must be defined. This value is not defined within `base.py`. It is sent as an argument to the constructor of the class. Following where the class is used in code, leads to a long inheritance that still does not reveal potential values that causes this bug. As such a quick fix is not possible on our end.
